@@ -1,3 +1,5 @@
+import { listenerCount } from "stream";
+
 export class Satellite {
 
 	name: string;
@@ -15,8 +17,11 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
+		if (this.type === "Space Debris"){
 		return true;
-   }
+		}
+		return false;
+	}
 
 }
 
